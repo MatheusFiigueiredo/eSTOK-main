@@ -1,0 +1,34 @@
+{
+  "name": "estok-server",
+  "version": "23.05.07",
+  "description": "eSTOK",
+  "main": "src/main.js",
+  "keywords": [
+    "STOK",
+    "ESTOQUE",
+    "ESTOK"
+  ],
+  "author": "TURMA 2023 TADS - INSTED",
+  "license": "ISC",
+  "scripts": {
+    "server": "nodemon --exec babel-node src/main.js",
+    "build": "babel src -d dist",
+    "start": "node dist/main.js"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.21.5",
+    "@babel/node": "^7.20.7",
+    "@babel/plugin-transform-async-to-generator": "^7.20.7",
+    "@babel/preset-env": "^7.21.5",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "nodemon": "^2.0.22",
+    "sequelize": "^6.31.0",
+    "sequelize-cli": "^6.6.0",
+    "sqlite3": "^5.1.6"
+  }
+}

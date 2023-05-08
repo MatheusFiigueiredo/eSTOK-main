@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "env": {
+    },
+    "builds": [
+        {
+            "src": "src/main.js",
+            "use": "@vercel/node"
+        },
+        {
+            "src": "**",
+            "use": "@vercel/static"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.+)",
+            "dest": "src/main.js"
+        }
+    ]
+}
