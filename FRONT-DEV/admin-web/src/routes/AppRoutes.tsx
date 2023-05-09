@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import MainLayout from '../components/MainLayout';
-import RoutesURL from '../modules/_shared/constants/Routes.enum';
+import RoutesPortal from '../modules/_shared/constants/Routes.enum';
 import Home from '../modules/home';
 import Produto from '../modules/produto';
 
@@ -10,8 +10,8 @@ const AppRoutes: React.FC = () => {
     <HashRouter>
       <MainLayout>
         <Routes>
-          <Route index path={RoutesURL.HOME} Component={Home} />
-          <Route path={RoutesURL.PRODUTO} Component={Produto} />
+          <Route index path={RoutesPortal.HOME} Component={Home} />
+          <Route path={RoutesPortal.PRODUTO} Component={Produto} />
         </Routes>
       </MainLayout>
     </HashRouter>

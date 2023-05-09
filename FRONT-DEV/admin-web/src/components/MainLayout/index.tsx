@@ -1,7 +1,7 @@
 // import { UserCircle } from '@heroicons/react/outline';
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import RoutesURL from '../../modules/_shared/constants/Routes.enum';
+import RoutesPortal from '../../modules/_shared/constants/Routes.enum';
 import { useAuth } from '../../modules/auth/contexts/AuthProvider';
 import Header from '../Header';
 
@@ -16,7 +16,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
   const { pathname } = useLocation();
 
   const getPathName = () => {
-    if (pathname === RoutesURL.HOME) {
+    if (pathname === RoutesPortal.HOME) {
       setRegistrationPage(true);
     } else {
       setRegistrationPage(false);
@@ -25,7 +25,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
 
   const logout = () => {
     signOut();
-    navigate(RoutesURL.LOGIN);
+    navigate(RoutesPortal.LOGIN);
     console.log('SAI');
   };
 
@@ -55,31 +55,31 @@ const MainLayout: React.FC<Props> = ({ children }) => {
                 </span>
               </div>
               <div className="flex flex-col mr-10">
-                <Link to={RoutesURL.HOME}>
+                <Link to={RoutesPortal.HOME}>
                   <div className="px-4 py-2 cursor-pointer w-full font-medium text-base hover:bg-sky-700 hover:rounded-r-[20px] transition-all ease-in-out rounded-sm">
                     Home
                   </div>
                 </Link>
 
-                <Link to={RoutesURL.PRODUTO}>
+                <Link to={RoutesPortal.PRODUTO}>
                   <div className="px-4 py-2 cursor-pointer w-full font-medium text-base hover:bg-sky-700 hover:rounded-r-[20px] transition-all ease-in-out rounded-sm">
                     Produto
                   </div>
                 </Link>
 
-                {/* <Link to={RoutesURL.HOME}>
+                {/* <Link to={RoutesPortal.HOME}>
                 <div className="px-4 py-2 cursor-pointer w-full font-medium text-base hover:bg-sky-700 hover:rounded-r-[20px] transition-all ease-in-out rounded-sm">
                   Estoque
                 </div>
               </Link> */}
 
-                {/* <Link to={RoutesURL.HOME}>
+                {/* <Link to={RoutesPortal.HOME}>
                 <div className="px-4 py-2 cursor-pointer w-full font-medium text-base hover:bg-sky-700 hover:rounded-r-[20px] transition-all ease-in-out rounded-sm">
                   Venda
                 </div>
               </Link> */}
 
-                {/* <Link to={RoutesURL.HOME}>
+                {/* <Link to={RoutesPortal.HOME}>
                 <div className="px-4 py-2 cursor-pointer w-full font-medium text-base hover:bg-sky-700 hover:rounded-r-[20px] transition-all ease-in-out rounded-sm">
                   Relatório
                 </div>

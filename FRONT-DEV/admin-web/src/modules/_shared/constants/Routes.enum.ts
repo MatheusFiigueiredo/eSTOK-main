@@ -1,7 +1,7 @@
-enum RoutesURL {
+enum RoutesPortal {
   HOME = '/',
   LOGIN = '/login',
   PRODUTO = '/produto'
 }
 
-export default RoutesURL;
+export default RoutesPortal;
